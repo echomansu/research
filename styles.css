@@ -457,3 +457,81 @@ footer {
     aspect-ratio: 1 / 1;
   }
 }
+
+
+/* --- AlgeSPACE project page styles --- */
+
+.algespace-logo {
+  width: min(240px, 55%);
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.algespace-overview-image {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 22px rgba(31, 41, 55, 0.08);
+}
+
+.algespace-animation-grid {
+  align-items: stretch;
+}
+
+.algespace-animation-card {
+  padding: 0.8rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.algespace-animation-card img {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #dbe4f0;
+  margin-bottom: 0.7rem;
+  display: block;
+}
+
+.algespace-animation-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(31, 41, 55, 0.11);
+}
+
+@media (max-width: 960px) {
+  .algespace-logo {
+    width: min(260px, 80%);
+  }
+}
+
+.algespace-hero {
+  background: linear-gradient(125deg, #ffffff 0%, #f8fbff 65%, #eef5ff 100%);
+}
+
+.algespace-subtitle {
+  margin-top: 0.5rem;
+  color: #1e40af;
+}
+
+.algespace-questions {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.algespace-questions li {
+  padding-left: 0.2rem;
+}
+
+.algespace-outputs a {
+  margin-left: 0.35rem;
+  font-weight: 600;
+}
+
+.algespace-team-grid .tile p {
+  margin-bottom: 0.55rem;
+}
+
+.tile h4 a {
+  color: inherit;
+  text-underline-offset: 3px;
+}
