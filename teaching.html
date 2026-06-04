@@ -5,11 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Teaching | Researcher Profile</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .quote-block {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin: 0.9rem 0 1rem;
+      font-style: italic;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    .quote-block .quote-text::before { content: '\201C'; }
+    .quote-block .quote-text::after  { content: '\201D'; }
+    .quote-block .quote-author {
+      font-style: normal;
+      font-weight: 700;
+      color: var(--text);
+      white-space: nowrap;
+    }
+    .tile-icon {
+      font-size: 1.75rem;
+      line-height: 1;
+      margin-bottom: 0.45rem;
+      display: block;
+    }
+    .focus-icon {
+      font-size: 1.1rem;
+      margin-right: 0.45rem;
+      flex-shrink: 0;
+    }
+    .list li {
+      display: flex;
+      align-items: flex-start;
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="container nav">
-      <a class="brand" href="index.html">Research Profile <span>· Man Su</span></a>
+      <a class="brand" href="index.html">Research Profile <span>&middot; Man Su</span></a>
       <nav class="menu" aria-label="Primary navigation">
         <a href="about.html">About</a>
         <a href="research.html">Research</a>
@@ -23,11 +58,14 @@
   <main class="container">
     <section class="card" style="margin-bottom: 1rem;">
       <h1>Teaching</h1>
-      <p class="lead"> People will forget what you said, but they will never forget how you made them feel - Maya Angelou</p>
+      <p class="quote-block">
+        <span class="quote-text">People will forget what you said, but they will never forget how you made them feel</span>
+        <span class="quote-author">&mdash; Maya Angelou</span>
+      </p>
       <ul class="list">
-        <li>Advanced Seminar (2026): Learning, Design, and Technology </li>
-        <li>Block Seminar (2024): Design and Development of Interactive Technologies for Teaching Complex Systems </li>
-        <li>Advanced Lecture (2025): Intelligent Systems and Human Learning </li>
+        <li>Advanced Seminar (2026): Learning, Design, and Technology</li>
+        <li>Block Seminar (2024): Design and Development of Interactive Technologies for Teaching Complex Systems</li>
+        <li>Advanced Lecture (2025): Intelligent Systems and Human Learning</li>
         <li>Block Seminar (2023): Intelligent Systems for Supporting Human Learning</li>
       </ul>
     </section>
@@ -39,16 +77,19 @@
       <h3 style="margin-bottom: 0.75rem; color: var(--text);">Research Projects</h3>
       <div class="grid-3" style="margin-bottom: 1.5rem;">
         <div class="tile">
+          <span class="tile-icon">∑</span>
           <span class="badge">AlgeSPACE</span>
           <h4><strong>Alge</strong>bra <strong>S</strong>caffolding with <strong>P</strong>edagogical <strong>A</strong>gents and <strong>C</strong>oncrete <strong>E</strong>xamples</h4>
           <p>A research project focused on designing and studying an adaptive mathematics tutoring environment for algebra learning. The system combines real-world concrete examples, support for strategic flexibility in problem solving, personalized pedagogical agents, and self-regulated learning scaffolds such as goal setting and motivational prompts.</p>
         </div>
         <div class="tile">
+          <span class="tile-icon">🐦</span>
           <span class="badge">SMILE</span>
           <h4><strong>S</strong>cience <strong>M</strong>isconception-Focused <strong>I</strong>mmersive <strong>L</strong>earning <strong>E</strong>nvironment</h4>
           <p>A research project focused on designing and studying an immersive science learning environment that helps students understand emergent phenomena and address common misconceptions in complex systems. The environment combines interactive simulation, LLM-based agents, and opportunities for generative learning activities (e.g., making predictions) as well as metacognitive monitoring (e.g., confidence-check reflections).</p>
         </div>
         <div class="tile">
+          <span class="tile-icon">🌍</span>
           <span class="badge">AGENTIC</span>
           <h4><strong>A</strong>gency-Supportive <strong>GEN</strong>-AI <strong>T</strong>eaching <strong>A</strong>gents for <strong>I</strong>ndividualized <strong>C</strong>oaching</h4>
           <p>A research project focused on designing and studying Generative AI-based Teaching Agents that not only provide individualized support but also strengthen student and teacher agency. Through a 3D simulator, the agents can support role-based exploration and coach students' self-regulated learning through goal setting, planning, monitoring, and reflection. The project also aims to support data-informed teaching and AI technology integration.</p>
@@ -58,27 +99,31 @@
       <h3 style="margin-bottom: 0.75rem; color: var(--text);">Thesis Focus Types</h3>
       <ul class="list" style="margin-bottom: 1.5rem;">
         <li>
-          <strong>Experiment-focused</strong> — You'd design instructional principles or activities using an existing learning environment and conduct an experiment, potentially using eye-tracking, to test their effectiveness and your research questions.
+          <span class="focus-icon">🔬</span>
+          <span><strong>Experiment-focused</strong> &mdash; You&rsquo;d design instructional principles or activities using an existing learning environment and conduct an experiment, potentially using eye-tracking, to test their effectiveness and your research questions.</span>
         </li>
         <li>
-          <strong>Data analysis-focused</strong> — You'd use an existing dataset, such as log data, video data, survey data, interview data, learning performance data, or multimodal data, to answer your own research questions.
+          <span class="focus-icon">📊</span>
+          <span><strong>Data analysis-focused</strong> &mdash; You&rsquo;d use an existing dataset, such as log data, video data, survey data, interview data, learning performance data, or multimodal data, to answer your own research questions.</span>
         </li>
         <li>
-          <strong>Design-focused</strong> — You'd engage in iterative (co-)design research with practitioners, community members, or students to produce digital artifacts, which would be followed by user testing or evaluations.
+          <span class="focus-icon">🎨</span>
+          <span><strong>Design-focused</strong> &mdash; You&rsquo;d engage in iterative (co-)design research with practitioners, community members, or students to produce digital artifacts, which would be followed by user testing or evaluations.</span>
         </li>
         <li>
-          <strong>Systematic Literature Review</strong> — You'd systematically search, select, review, and synthesize existing research on a specific topic to identify key findings, trends, gaps, and future research directions.
+          <span class="focus-icon">📚</span>
+          <span><strong>Systematic Literature Review</strong> &mdash; You&rsquo;d systematically search, select, review, and synthesize existing research on a specific topic to identify key findings, trends, gaps, and future research directions.</span>
         </li>
       </ul>
 
       <div class="actions">
         <a class="btn primary" href="https://forms.office.com/Pages/DesignPageV2.aspx?origin=RevampFRE&subpage=design&id=zrWw0IWDNES3QAd5gpsiuofzbEw18PVFtPXPdm9DklpUODUwVTEwSFU2RjQzU01FQzJJNFo5V0lOVC4u&branchingelementid=rbf1fd78032284ad9bc8918bb73c107f3" target="_blank" rel="noopener noreferrer">
-          Apply to Thesis Supervision →
+          Apply to Thesis Supervision &rarr;
         </a>
       </div>
     </section>
 
-    <footer>© Man Su · Teaching</footer>
+    <footer>&copy; Man Su &middot; Teaching</footer>
   </main>
 </body>
 </html>
