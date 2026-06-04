@@ -4,8 +4,8 @@
   --surface-soft: #f1f5fb;
   --text: #1f2937;
   --muted: #6b7280;
-  --primary: #3b82f6;
-  --primary-soft: #dbeafe;
+  --primary: #f97316;
+  --primary-soft: #ffedd5;
   --line: #e5e7eb;
   --shadow: 0 12px 30px rgba(31, 41, 55, 0.08);
   --radius: 18px;
@@ -16,7 +16,7 @@ html, body { margin: 0; padding: 0; }
 body {
   font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: var(--text);
-  background: radial-gradient(circle at 10% -5%, #eef5ff 0%, var(--bg) 45%), var(--bg);
+  background: radial-gradient(circle at 10% -5%, #fff3e8 0%, var(--bg) 45%), var(--bg);
   line-height: 1.6;
 }
 
@@ -58,7 +58,7 @@ header {
   transition: 0.2s ease;
 }
 .menu a:hover { color: var(--primary); background: var(--primary-soft); }
-.menu a.active { color: #1e40af; background: var(--primary-soft); }
+.menu a.active { color: #c2410c; background: var(--primary-soft); }
 
 main { padding: 2rem 0 3rem; }
 
@@ -83,7 +83,7 @@ main { padding: 2rem 0 3rem; }
   align-items: center;
   gap: 0.5rem;
   background: var(--primary-soft);
-  color: #1e40af;
+  color: #c2410c;
   padding: 0.4rem 0.75rem;
   border-radius: 999px;
   font-size: 0.85rem;
@@ -143,8 +143,8 @@ p.lead { margin: 0.9rem 0 1rem; color: var(--muted); max-width: 64ch; }
   display: inline-block;
   font-size: 0.74rem;
   font-weight: 700;
-  color: #4338ca;
-  background: #eef2ff;
+  color: #9a3412;
+  background: #fff7ed;
   border-radius: 999px;
   padding: 0.2rem 0.55rem;
   margin-bottom: 0.5rem;
@@ -428,7 +428,7 @@ footer {
 .team-role {
   margin: 0 0 0.25rem;
   font-weight: 700;
-  color: #1e40af;
+  color: #c2410c;
 }
 
 .team-affiliation {
@@ -508,7 +508,7 @@ footer {
 
 .algespace-subtitle {
   margin-top: 0.5rem;
-  color: #1e40af;
+  color: #c2410c;
 }
 
 .algespace-questions {
