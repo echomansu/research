@@ -68,8 +68,8 @@
       </p>
       <img
         class="algespace-overview-image"
-        src="media/smile/flocking_simulator.gif"
-        alt="Animated demo of the SMILE flocking simulator showing a sheep flock and the learner-controlled dog character"
+        src="media/smile/exploration.gif"
+        alt="Animated demo of the SMILE flocking simulator: the learner-controlled dog enters the open world under the banner 'How do animals move in groups?'"
       />
       <div class="grid-3" style="margin-top: 1rem;">
         <article class="tile">
@@ -102,37 +102,39 @@
 
     <section class="card">
       <h2>Inside the Environment</h2>
-      <p class="lead">Screenshots from the flocking simulator showing key features of the learning experience.</p>
+      <p class="lead">Animated snippets from the flocking simulator showing key features of the learning experience.</p>
       <div class="grid-2 algespace-animation-grid">
         <article class="tile algespace-animation-card">
-          <img src="media/smile/intro_screen.png" alt="Opening scene asking 'How do animals move in groups?' with the learner-controlled dog character" />
-          <h4>Open-World Entry</h4>
-          <p>Learners control a virtual dog and navigate the environment freely using a self-paced, non-linear design.</p>
+          <img src="media/smile/lesson1_sheep.gif" alt="Lesson 1 with the sheep flock: a prediction question and the Show Interactions view revealing the network of local interactions" />
+          <h4>Lesson 1 — Emergent Flocking (Sheep)</h4>
+          <p>Learners answer prediction questions and toggle "Show Interactions" to reveal the invisible network of local interactions behind the flock's pattern.</p>
+        </article>
+        <article class="tile algespace-animation-card">
+          <img src="media/smile/butterfly_tutor.gif" alt="Learner-initiated dialogue with the LLM-based Butterfly Tutor about what the sheep flock is doing" />
+          <h4>The Butterfly Tutor</h4>
+          <p>Learners chat with the LLM-based tutor, which responds with context-aware, PAIR-C-grounded guidance about the emergent behavior around them.</p>
+        </article>
+        <article class="tile algespace-animation-card">
+          <img src="media/smile/lesson2_ducks.gif" alt="Lesson 2 with the duck flock: a prediction question followed by manipulation of alignment, cohesion, and separation sliders" />
+          <h4>Lesson 2 — Predict &amp; Manipulate (Ducks)</h4>
+          <p>Built-in prompts ask learners to predict flock behavior, then test their predictions by tweaking the alignment, cohesion, and separation sliders.</p>
+        </article>
+        <article class="tile algespace-animation-card">
+          <img src="media/smile/lesson3_bats.gif" alt="Lesson 3 with the bat swarm: exploring pattern stability by manipulating the speed parameter" />
+          <h4>Lesson 3 — Causality &amp; Transfer (Bats)</h4>
+          <p>Learners explore advanced causality concepts with the bat swarm, testing whether emergent patterns hold as parameters such as speed change.</p>
+        </article>
+      </div>
+      <div class="grid-2 algespace-animation-grid" style="margin-top: 0.85rem;">
+        <article class="tile algespace-animation-card">
+          <img src="media/smile/ai_feedback.png" alt="AI-generated corrective feedback elaborating on why an answer about Earth's climate as a complex system was incomplete" />
+          <h4>AI-Supported Corrective Feedback</h4>
+          <p>For open-ended questions, the system generates real-time elaborated feedback on student responses via the OpenAI API.</p>
         </article>
         <article class="tile algespace-animation-card">
           <img src="media/smile/call_butterfly.png" alt="Sheep flock scene with the non-intrusive 'Call Butterfly' prompt at the bottom" />
           <h4>Non-Intrusive Tutor Access</h4>
           <p>A gentle "Call Butterfly" prompt reminds learners that the LLM tutor is available without demanding interaction.</p>
-        </article>
-        <article class="tile algespace-animation-card">
-          <img src="media/smile/butterfly_dialogue.png" alt="Learner-initiated dialogue with the Butterfly Tutor about what the sheep are doing" />
-          <h4>Learner-Initiated Dialogue</h4>
-          <p>The Butterfly Tutor responds with context-aware, PAIR-C-grounded guidance about the sheep flock's emergent behavior.</p>
-        </article>
-        <article class="tile algespace-animation-card">
-          <img src="media/smile/manipulation_phase.png" alt="Lesson 2 duck flock with alignment, cohesion, and separation parameter sliders" />
-          <h4>Parameter Manipulation</h4>
-          <p>Learners tweak alignment, cohesion, and separation sliders to experiment with how local rules shape flock formation.</p>
-        </article>
-        <article class="tile algespace-animation-card">
-          <img src="media/smile/prediction_phase.png" alt="Lesson 2 prediction question asking whether ducks stay close to each other, with Yes/No options" />
-          <h4>Prediction Activities</h4>
-          <p>Built-in prompt questions ask learners to predict flock behavior before manipulating parameters — a generative learning activity.</p>
-        </article>
-        <article class="tile algespace-animation-card">
-          <img src="media/smile/ai_feedback.png" alt="AI-generated corrective feedback elaborating on why an answer about Earth's climate as a complex system was incomplete" />
-          <h4>AI-Supported Corrective Feedback</h4>
-          <p>For open-ended questions, the system generates real-time elaborated feedback on student responses via the OpenAI API.</p>
         </article>
       </div>
     </section>
