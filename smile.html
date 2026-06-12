@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SMILE | Researcher Profile</title>
+  <meta name="description" content="SMILE project: Science Misconception-Focused Immersive Learning Environment for complex systems education." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html">Research Profile <span>· Man Su</span></a>
+      <nav class="menu" aria-label="Primary navigation">
+        <a href="about.html">About</a>
+        <a class="active" href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="team.html">Team</a>
+        <a href="publications.html">Publications</a>
+        <a href="news.html">News</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card algespace-hero">
+      <p class="tag">Project</p>
+      <h1>SMILE 🐑</h1>
+      <p class="lead algespace-subtitle">
+        <strong>Science Misconception-Focused Immersive Learning Environment</strong>
+      </p>
+      <p>
+        SMILE is a research project focused on designing and studying an immersive science learning environment
+        that helps students understand emergent phenomena and address common misconceptions in complex systems.
+        The environment combines interactive simulation, LLM-based agents, and opportunities for generative
+        learning activities (e.g., making predictions) as well as metacognitive monitoring
+        (e.g., confidence-check reflections).
+      </p>
+      <div class="actions">
+        <a class="btn" href="research.html">Back to Research</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Research Questions</h2>
+      <ol class="algespace-questions">
+        <li>
+          How does learner engagement within an open-world, self-paced, LLM-supported learning environment
+          relate to measurable learning outcomes?
+        </li>
+        <li>
+          How do parameter control and questioning agency shape learner agency and understanding of
+          emergent phenomena in complex systems?
+        </li>
+        <li>
+          How can conceptual frameworks such as PAIR-C (Patterns, Agents, Interactions, Relations, and Causality)
+          be integrated into the design of interactive simulation-based learning environments?
+        </li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>The Flocking Simulator</h2>
+      <p class="lead">
+        An immersive open-world environment where learners control a virtual dog to explore animal groups
+        exhibiting collective behaviors — sheep flocks, duck flocks, and bat swarms — as analogies for
+        emergent processes in complex systems.
+      </p>
+      <img
+        class="algespace-overview-image"
+        src="media/smile/flocking_simulator.gif"
+        alt="Animated demo of the SMILE flocking simulator showing a sheep flock and the learner-controlled dog character"
+      />
+      <div class="grid-3" style="margin-top: 1rem;">
+        <article class="tile">
+          <h4>🐑 Basic Lesson</h4>
+          <p>Foundational complex systems concepts around the sheep flock: recognizing emergent flocking patterns and matching agents in the environment to their roles.</p>
+        </article>
+        <article class="tile">
+          <h4>🦆 Intermediate Lesson</h4>
+          <p>The three flocking rules from the Boids model (separation, cohesion, alignment) explored with the duck flock, covering Interactions and Relations.</p>
+        </article>
+        <article class="tile">
+          <h4>🦇 Complex Lesson</h4>
+          <p>Advanced ideas about Causality with the bat swarm: net effects vs. chain effects, common misconceptions, and transfer to phenomena like Earth's climate.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>The Butterfly Tutor</h2>
+      <p>
+        Learners can call a dynamic LLM-based <strong>Butterfly Tutor</strong> (powered by GPT-4o) at any time
+        for adaptive, context-aware support. Its design follows three principles:
+      </p>
+      <ol class="algespace-questions">
+        <li><strong>Theoretical alignment</strong> — responses are grounded in the PAIR-C framework to ensure conceptual consistency.</li>
+        <li><strong>Environmental awareness</strong> — the tutor uses regional metadata to contextualize its responses, intervening with certainty when it detects misunderstandings.</li>
+        <li><strong>Non-intrusive representation</strong> — a blinking butterfly icon gently reminds learners of the feature without demanding interaction, and softly redirects off-topic conversations back to complex systems concepts.</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>Key Findings</h2>
+      <p>
+        In an experiment with 69 postsecondary students varying parameter control and questioning agency,
+        greater engagement with the LLM-based tutor — particularly through content-focused interactions —
+        was associated with higher learning gains. Time spent in exploratory instructional regions also
+        significantly predicted posttest performance, highlighting the importance of fostering meaningful
+        engagement with both conversational tutors and interactive features in LLM-supported environments.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Scientific Outputs</h2>
+      <ul class="list algespace-outputs">
+        <li>
+          <strong>ISLS 2026 Short Paper.</strong>
+          Nair, A., Su, M., &amp; Nagashima, T. (2026). Exploring Learner Engagement in an LLM-Supported Simulation
+          Environment for Complex Systems Understanding. <em>International Society of the Learning Sciences (ISLS) 2026.</em>
+        </li>
+        <li>
+          <strong>Journal Article (Under Review).</strong>
+          Su, M., Nair, A., &amp; Nagashima, T. Exploring Learner Agency in an AI-supported Simulation Environment
+          for Complex Systems Education. <em>Studies in Higher Education</em> (special issue: Learner-AI Agency).
+        </li>
+        <li>
+          <strong>Conference Presentation.</strong>
+          EARLI SIG 6&amp;7 (2026). Accepted contribution on the flocking simulator and complex systems learning.
+        </li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Project Team</h2>
+      <div class="grid-3 algespace-team-grid">
+        <article class="tile">
+          <h4>Developers</h4>
+          <p>Amit Nair (Flocking Simulator)</p>
+        </article>
+        <article class="tile">
+          <h4>Researchers</h4>
+          <p>Dr. Man Echo Su (Project Lead)</p>
+          <p>Prof. Tomohiro Nagashima</p>
+          <p>Amit Nair</p>
+        </article>
+        <article class="tile">
+          <h4>Design Partners</h4>
+          <p>Developed through participatory design with a biology teacher and a domain expert to ensure content validity and pedagogical relevance.</p>
+        </article>
+      </div>
+    </section>
+
+    <footer>© Man Su · SMILE</footer>
+  </main>
+</body>
+</html>
