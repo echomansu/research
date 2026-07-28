@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Climate Change Simulator | SMILE | Researcher Profile</title>
+  <meta name="description" content="Climate Change Simulator: a role-based 3D climate learning environment with an AI conversational agent, part of the SMILE research program." />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!--
+    Page-specific styles are kept inline here so this page can be dropped into the
+    repo without editing styles.css. If you prefer, move everything inside <style>
+    into styles.css under a "/* --- Climate Change Simulator page --- */" heading
+    and delete this block.
+  -->
+  <style>
+    .climate-hero { background: linear-gradient(125deg, #ffffff 0%, #f6fbf8 60%, #e9f3ef 100%); }
+    .climate-subtitle { margin-top: 0.5rem; color: #c2410c; font-size: 1.05rem; }
+
+    .stat-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.85rem; }
+    .stat {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fff;
+      padding: 1rem;
+    }
+    .stat-value {
+      font-size: 1.55rem;
+      font-weight: 760;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: #c2410c;
+    }
+    .stat-label { color: var(--muted); font-size: 0.92rem; margin-top: 0.3rem; }
+
+    .journey { list-style: none; padding: 0; margin: 0; counter-reset: step; display: grid; gap: 0.7rem; }
+    .journey li {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 0.85rem;
+      align-items: start;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      padding: 0.8rem 0.9rem;
+    }
+    .journey li::before {
+      content: counter(step);
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--primary-soft);
+      color: #c2410c;
+      font-weight: 760;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .journey h4 { margin: 0 0 0.2rem; font-size: 1rem; }
+    .journey p { margin: 0; color: var(--muted); }
+
+    .kv { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.55rem; }
+    .kv li { display: grid; grid-template-columns: 210px 1fr; gap: 0.9rem; align-items: baseline; }
+    .kv .kv-key { font-weight: 700; }
+    .kv .kv-val { color: var(--muted); }
+
+    .note {
+      background: var(--surface-soft);
+      border: 1px solid #e4ecfb;
+      border-radius: 12px;
+      padding: 0.85rem 0.95rem;
+      color: var(--muted);
+      font-size: 0.94rem;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 960px) {
+      .stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .kv li { grid-template-columns: 1fr; gap: 0.15rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html">Research Profile <span>· Man Su</span></a>
+      <nav class="menu" aria-label="Primary navigation">
+        <a href="about.html">About</a>
+        <a class="active" href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="team.html">Team</a>
+        <a href="publications.html">Publications</a>
+        <a href="news.html">News</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- ============================= HERO / HEADLINE ============================= -->
+    <section class="card climate-hero">
+      <p class="tag">SMILE Program · Environment</p>
+      <h1>Climate Change Simulator 🌍</h1>
+      <p class="lead climate-subtitle">
+        <strong>Take a role. Weigh the trade-offs. Watch the planet answer back.</strong>
+      </p>
+      <p>
+        The Climate Change Simulator is a role-based 3D learning environment in which learners step into the
+        shoes of a <strong>Citizen</strong> or a <strong>Farmer</strong>, explore climate-related topics in an
+        interactive world, and spend a limited budget of <em>Power Coins</em> on climate policies that visibly
+        change the state of the simulated environment. Throughout the experience, an AI conversational agent
+        named <strong>Bobby</strong> explains why a policy helped or hurt, interprets extreme events as they
+        appear, and helps learners reflect on how their own thinking changed.
+      </p>
+      <p>
+        The design goal is not to teach climate facts in isolation, but to make climate change learnable
+        <strong>as a system</strong> — where energy, agriculture, urbanization, food systems and extreme events
+        are connected, and where policy decisions involve genuine trade-offs rather than obviously right answers.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="smile.html">About the SMILE Program</a>
+        <a class="btn" href="research.html">Back to Research</a>
+      </div>
+    </section>
+
+    <!-- ============================= PLACE IN SMILE ============================= -->
+    <section class="card">
+      <h2>Part of the SMILE Program</h2>
+      <p>
+        <strong>SMILE (Systems Modeling in Intelligent Learning Environment)</strong> is a parallel research
+        program comprising three GenAI-supported environments for learning about complex systems. Each
+        environment targets a different phenomenon and a different facet of learner support, while sharing a
+        common commitment to systems thinking, learner agency, and context-aware AI guidance.
+      </p>
+      <div class="grid-3" style="margin-top: 1rem;">
+        <article class="tile">
+          <span class="badge">Environment</span>
+          <h4><a href="smile.html">Flocking Simulator</a></h4>
+          <p>An open-world environment where learners explore emergent collective behavior in sheep flocks, duck flocks and bat swarms, supported by an LLM-based Butterfly Tutor.</p>
+        </article>
+        <article class="tile">
+          <span class="badge">Environment</span>
+          <h4>Climate Change Simulator</h4>
+          <p><em>This page.</em> A role-based climate policy simulation with a 3D world that responds to learners' decisions, guided by the AI agent Bobby.</p>
+        </article>
+        <!-- TODO: replace the tile below with the third SMILE environment (name, link, one-line description). -->
+        <article class="tile">
+          <span class="badge">Environment</span>
+          <h4>Third Environment</h4>
+          <p>Short description of the third GenAI-supported environment in the SMILE program.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================= RESEARCH QUESTIONS ============================= -->
+    <section class="card">
+      <h2>Research Questions</h2>
+      <ol class="algespace-questions">
+        <li>
+          <strong>Design.</strong> How might we design a role-based climate simulator integrated with an AI
+          conversational agent to support learners' understanding of climate systems and their reasoning about
+          trade-offs in climate policy decision-making?
+        </li>
+        <li>
+          <strong>Learning &amp; affect.</strong> How does interaction with the role-based climate simulator and
+          the AI conversational agent influence learners' climate knowledge, climate anxiety, and willingness to act?
+        </li>
+        <li>
+          <strong>Perception.</strong> How do learners perceive the usability and usefulness of the role-based
+          climate simulator and the AI conversational agent?
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============================= LEARNER JOURNEY ============================= -->
+    <section class="card">
+      <h2>The Learner Journey</h2>
+      <p class="lead">A guided path from role selection through decision-making to reflection.</p>
+      <ol class="journey">
+        <li>
+          <div>
+            <h4>Choose a stakeholder role</h4>
+            <p>Learners enter an anonymous ID and pick <strong>Citizen</strong> or <strong>Farmer</strong>. The role determines which climate topics they encounter and from whose perspective the trade-offs are felt.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h4>Set a baseline</h4>
+            <p>Short self-assessments (perceived knowledge, willingness to invest effort, personal importance of climate change) plus one open-ended, role-specific climate question that will be revisited at the end.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h4>Explore a 3D world</h4>
+            <p>A split-screen layout keeps a city or farm environment visible at all times while a side panel steps through content items — each pairing a short explanation with a 3D model of a concrete climate-related situation.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h4>Decide under constraint</h4>
+            <p>At decision points, learners spend from a limited budget of <strong>Power Coins</strong> on climate policies. Costs are revealed only after a choice is made, and unaffordable policies are locked — so learners must reason rather than buy the most expensive option.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h4>Watch the world respond</h4>
+            <p><strong>Earth Health</strong> summarizes the environmental state of the simulation. As it falls, the 3D world visibly degrades and extreme events appear — urban or forest fire, flooding, hurricanes, rising sea level — making consequences immediate rather than abstract.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h4>Ask Bobby, on demand</h4>
+            <p>The AI agent is always available but never mandatory. Learners open or close the chat as they wish; Bobby proactively offers help right after a policy choice.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h4>Reflect and compare</h4>
+            <p>Learners answer the opening question a second time and receive AI-generated feedback that explicitly compares their earlier and later answers and names what improved in their reasoning.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h4>Review the outcome</h4>
+            <p>A results screen shows the chosen policies, remaining Power Coins, and final Earth Health, with a Bobby-generated summary of the positive and negative impacts of each decision — and room to keep asking questions.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h4>Challenge the AI (optional mode)</h4>
+            <p>In a separate <strong>misconception correction mode</strong>, the AI deliberately produces an answer containing two subtle climate misconceptions. The learner's job is to find and correct them, one at a time, with the AI judging whether each correction is conceptually valid.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============================= DESIGN FEATURES ============================= -->
+    <section class="card">
+      <h2>Core Design Features</h2>
+      <p class="lead">
+        Ten design requirements were derived from prior work on climate games, simulation-based learning,
+        role-based learning, systems thinking, and AI-supported learning. They translate into six core features.
+      </p>
+      <div class="grid-3" style="margin-top: 1rem;">
+        <article class="tile">
+          <h4>🎭 Stakeholder roles &amp; content structure</h4>
+          <p>Climate change is split into connected categories rather than one abstract topic: Energy &amp; Emissions, Extreme Events, Urbanization, Agriculture, and Food Systems — each with short explanations and 3D models. Citizen and Farmer share two categories and differ in the rest.</p>
+        </article>
+        <article class="tile">
+          <h4>⚖️ Policy decision system</h4>
+          <p>Every policy carries a Power Coin cost and an Earth Health effect. Because the budget is finite and some cheap policies do harm, learners experience climate policy as a balancing process rather than a list of correct answers.</p>
+        </article>
+        <article class="tile">
+          <h4>🌪️ Extreme events</h4>
+          <p>Floods, wildfires, hurricanes and rising sea levels appear both as content and as visual consequences in the 3D world, tying long-term emissions to immediate, visible risk — a category under-represented in earlier climate games.</p>
+        </article>
+        <article class="tile">
+          <h4>🤖 The AI agent "Bobby"</h4>
+          <p>Bobby answers questions, explains why a policy helped or hurt, interprets the current extreme event, and summarizes the run. Prompts define his role, tone and output format, and always carry the current simulation context.</p>
+        </article>
+        <article class="tile">
+          <h4>🔁 Reflection &amp; results</h4>
+          <p>Self-assessments and an open-ended question bracket the simulation, so learners can see their own reasoning change. The results screen connects individual decisions to the final environmental outcome.</p>
+        </article>
+        <article class="tile">
+          <h4>🔍 Misconception correction mode</h4>
+          <p>A separate activity that flips the relationship with AI: instead of trusting the agent's answer, learners must critically evaluate and repair it. Two valid corrections complete the task.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================= BOBBY ============================= -->
+    <section class="card">
+      <h2>Designing Bobby: Context-Aware AI Support</h2>
+      <p>
+        Bobby is never called with the learner's question alone. Each request carries the state the learner is
+        currently looking at, and each prompt specifies the agent's role, the expected tone, and a required
+        output format. Five distinct prompt roles are used across the experience:
+      </p>
+      <ul class="list">
+        <li><strong>Adaptive content ordering.</strong> Before the simulation, the model orders content categories by relevance given the learner's role, self-rated knowledge, willingness to invest effort, and perceived importance of climate change.</li>
+        <li><strong>In-simulation dialogue.</strong> Short, friendly, Markdown-formatted explanations grounded in the content item currently on screen.</li>
+        <li><strong>Extreme-event explanation.</strong> Bobby explains why a given event is occurring — while being explicitly forbidden from exposing or justifying the underlying numeric thresholds, which are gameplay values rather than science.</li>
+        <li><strong>Post-assessment feedback.</strong> A deliberately generous rubric that rewards conceptual improvement, names exactly how the learner's thinking evolved between their two answers, and avoids penalizing missing jargon.</li>
+        <li><strong>Results summary.</strong> A structured review of chosen policies, their positive and negative impacts, and next steps, ending with an invitation to keep asking.</li>
+      </ul>
+      <p style="margin-top: 1rem;">
+        Learner agency is a design constraint throughout: the chat can be opened or closed at will, and no path
+        through the simulation requires interacting with the AI.
+      </p>
+    </section>
+
+    <!-- INSIDE THE ENVIRONMENT: screenshots / GIFs.
+         This section is hidden so the page never shows broken images.
+         To enable it: (1) put your images in media/smile-climate/, then
+         (2) delete the style="display:none" attribute on the section below. -->
+    <section class="card" style="display:none">
+      <h2>Inside the Environment</h2>
+      <p class="lead">Snapshots from the Climate Change Simulator.</p>
+      <div class="grid-2 algespace-animation-grid">
+        <article class="tile algespace-animation-card">
+          <img src="media/smile-climate/simulation.png" alt="Main simulation interface with the 3D city environment, content panel, Earth Health and Power Coins" />
+          <h4>The Main Simulation</h4>
+          <p>A persistent 3D world on the left, climate content and live indicators on the right.</p>
+        </article>
+        <article class="tile algespace-animation-card">
+          <img src="media/smile-climate/policy_decision.png" alt="Policy decision screen showing selectable climate policies" />
+          <h4>Policy Decisions</h4>
+          <p>Limited Power Coins force trade-offs; unaffordable policies are locked.</p>
+        </article>
+        <article class="tile algespace-animation-card">
+          <img src="media/smile-climate/extreme_events.png" alt="Extreme events in the 3D environment: hurricane, flooding and urban fire" />
+          <h4>Extreme Events</h4>
+          <p>The world visibly degrades as Earth Health falls.</p>
+        </article>
+        <article class="tile algespace-animation-card">
+          <img src="media/smile-climate/bobby_chat.png" alt="Chat with the AI conversational agent Bobby about a chosen policy" />
+          <h4>Talking to Bobby</h4>
+          <p>Context-aware explanations of policies, events and results.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================= EVALUATION ============================= -->
+    <section class="card">
+      <h2>Evaluation</h2>
+      <p>
+        A remote user study was conducted with <strong>25 participants</strong> recruited through Prolific.
+        Participants completed a Qualtrics pretest, worked through the simulator on their own devices — most
+        completing runs in <em>both</em> stakeholder roles plus the misconception correction mode — and then
+        completed a Qualtrics posttest. Anonymous Prolific IDs linked survey responses to simulator log data.
+      </p>
+      <ul class="kv" style="margin-top: 1rem;">
+        <li><span class="kv-key">Climate knowledge</span><span class="kv-val">14 true/false items plus one open-ended systems-thinking question scored with a Components–Mechanisms–Phenomena rubric, and five confidence ratings.</span></li>
+        <li><span class="kv-key">Climate anxiety &amp; worry</span><span class="kv-val">Items adapted from the Climate Change Anxiety Scale and the Climate Change Worry Scale.</span></li>
+        <li><span class="kv-key">Willingness to act</span><span class="kv-val">Ten paired pre/post items on climate-friendly behavior and intention.</span></li>
+        <li><span class="kv-key">Usability &amp; usefulness</span><span class="kv-val">Post-only ratings of task demands, simulation usability, and AI agent usability and usefulness.</span></li>
+        <li><span class="kv-key">Interaction logs</span><span class="kv-val">Policy choices, Earth Health and Power Coin trajectories, chat messages, and per-section timing.</span></li>
+      </ul>
+    </section>
+
+    <!-- ============================= KEY FINDINGS ============================= -->
+    <section class="card">
+      <h2>Key Findings</h2>
+      <div class="stat-grid">
+        <div class="stat">
+          <div class="stat-value">5.76 → 6.48</div>
+          <div class="stat-label">Open-ended systems-thinking score (of 9) — a significant gain</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">4.26 → 4.66</div>
+          <div class="stat-label">Confidence in knowledge answers (of 5) — significant</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">3.55 → 4.11</div>
+          <div class="stat-label">Willingness to act (of 5) — significant</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">4.52 / 5</div>
+          <div class="stat-label">Overall usability &amp; usefulness rating of the AI agent</div>
+        </div>
+      </div>
+
+      <p style="margin-top: 1.1rem;">
+        <strong>Systems thinking improved; isolated facts did not.</strong> Open-ended explanations of climate
+        change as an interconnected system improved significantly, while true/false knowledge barely moved —
+        unsurprising given a high pretest ceiling. The simulator was better at helping learners
+        <em>connect</em> causes, consequences and decisions than at changing basic factual answers.
+      </p>
+      <p>
+        <strong>Reflection answers improved substantially.</strong> AI-scored answers to the stakeholder-specific
+        question rose from 5.71 to 8.71 out of 10 between the pre- and post-simulation attempt.
+      </p>
+      <p>
+        <strong>Concern and agency rose together.</strong> Climate worry increased significantly — the simulation
+        made consequences more visible — but so did willingness to act, suggesting concern that is connected to
+        decisions and feedback rather than to helplessness.
+      </p>
+      <p>
+        <strong>Demanding but manageable.</strong> Participants rated the simulation as mentally demanding
+        (M = 4.00) and effortful (M = 4.44), yet also reported high perceived success (M = 4.16), low frustration
+        (M = 2.44), and strong overall usability (M = 4.30), with the highest agreement on wanting to use it again.
+      </p>
+      <p>
+        <strong>Learners engaged with the trade-offs.</strong> Across 49 simulator runs, 276 policy decisions
+        were logged; 87.7% had a positive Earth Health effect. In their second run participants spent
+        significantly more Power Coins (31.7 → 38.4) without achieving better Earth Health — a concrete
+        demonstration that climate policy is about choosing <em>effective</em> actions, not simply more of them.
+      </p>
+      <p>
+        <strong>The AI agent was used, and valued.</strong> Participants wrote on average 7.2 messages per run.
+        The strongest ratings were for helping them explain why policies improved or harmed Earth Health
+        (M = 4.72) and understand the environmental consequences of their decisions (M = 4.68).
+      </p>
+    </section>
+
+    <!-- ============================= DESIGN IMPLICATIONS ============================= -->
+    <section class="card">
+      <h2>Design Implications</h2>
+      <ol class="algespace-questions">
+        <li><strong>Target systems thinking, not factual recall.</strong> Ask learners to connect causes, consequences, stakeholders and decisions — that is where the measurable gains appeared.</li>
+        <li><strong>Make trade-offs visible.</strong> Constrain resources so that "more action" and "better outcome" come apart.</li>
+        <li><strong>Use roles to make decisions concrete.</strong> A citizen and a farmer feel the same policy differently, which surfaces climate change as a social and political issue, not only a scientific one.</li>
+        <li><strong>Pair visual indicators with explanation.</strong> Earth Health and Power Coins tell learners <em>that</em> something changed; the AI agent tells them <em>why</em>.</li>
+        <li><strong>Use AI agents for reflection, not only Q&amp;A.</strong> Summarizing decisions and comparing a learner's earlier and later answers made the agent a reflection partner.</li>
+        <li><strong>Keep AI support context-aware.</strong> The agent was most useful when it could refer to the current topic, chosen policy, role, or final result.</li>
+        <li><strong>Complexity is acceptable if it is structured.</strong> A demanding simulation still felt usable when the flow was stepwise and the feedback was clear.</li>
+      </ol>
+    </section>
+
+    <!-- ============================= TECHNOLOGY ============================= -->
+    <section class="card">
+      <h2>How It Is Built</h2>
+      <ul class="kv">
+        <li><span class="kv-key">Backend</span><span class="kv-val">Laravel (PHP) — routing, controllers, session handling, migrations and seeders for stakeholders, content items, policies and the question pool, plus interaction logging.</span></li>
+        <li><span class="kv-key">Frontend</span><span class="kv-val">React with TypeScript — one page per step of the learner journey, with typed models for sessions, content items, policies and chat messages.</span></li>
+        <li><span class="kv-key">3D environment</span><span class="kv-val">Three.js via React Three Fiber and drei, with GLB models preloaded and cached before the simulation begins; the scene reacts to Earth Health through lighting, atmosphere and extreme-event effects.</span></li>
+        <li><span class="kv-key">AI layer</span><span class="kv-val">OpenAI API (GPT-4.1 mini) called exclusively server-side through a single controller, so API keys never reach the browser and every prompt carries controlled context.</span></li>
+        <li><span class="kv-key">Iteration</span><span class="kv-val">A pilot study at the LaLaLab reshaped the design: a remaining-decisions counter, hidden policy costs before selection, a lower starting budget, an earlier first extreme event, an explanation for locked policies, and Enter-to-send in the chat.</span></li>
+      </ul>
+      <div class="note">
+        <strong>A note on the model.</strong> The simulator is a learning environment, not a climate model.
+        Earth Health, Power Coin costs and policy effects are symbolic gameplay values designed to make
+        trade-offs legible; they are not calibrated economic costs or measured environmental impacts, and
+        outcomes should not be read as climate predictions.
+      </div>
+    </section>
+
+    <!-- ============================= OUTPUTS & TEAM ============================= -->
+    <section class="card">
+      <h2>Scientific Outputs</h2>
+      <ul class="list algespace-outputs">
+        <li>
+          <strong>Bachelor Thesis.</strong>
+          Gaffga, K. T. (2026). <em>Design and Evaluation of an AI-Supported Climate Simulation to Foster
+          Conceptual Understanding and Self-Regulated Learning.</em> Saarland University, Faculty of Mathematics
+          and Computer Science. Advisor: Dr. Man Su. Reviewers: Prof. Dr. Tomohiro Nagashima, Dr.-Ing. Felix Kosmalla.
+        </li>
+        <!-- Add papers, talks or demo links here as they appear. -->
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Project Team</h2>
+      <div class="grid-3 algespace-team-grid">
+        <article class="tile">
+          <h4>Developer</h4>
+          <p>Kevin Tanagon Gaffga (Climate Change Simulator)</p>
+        </article>
+        <article class="tile">
+          <h4>Researchers</h4>
+          <p>Dr. Man Echo Su (PI, Project Lead, Thesis Advisor)</p>
+          <p>Prof. Tomohiro Nagashima (Advisor)</p>
+        </article>
+        <article class="tile">
+          <h4>Context</h4>
+          <p>Developed and evaluated at the LaLaLab, Saarland Informatics Campus, in collaboration with the Leibniz-Institut für Wissensmedien.</p>
+        </article>
+      </div>
+    </section>
+
+    <footer>© Man Su · SMILE · Climate Change Simulator</footer>
+  </main>
+</body>
+</html>
