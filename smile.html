@@ -4,10 +4,51 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SMILE | Researcher Profile</title>
-  <meta name="description" content="SMILE project: Science Misconception-Focused Immersive Learning Environment for complex systems education." />
+  <meta name="description" content="SMILE (Systems Modeling in Intelligent Learning Environment): a research program comprising three GenAI-supported environments for learning about complex systems." />
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .smile-hero { background: linear-gradient(125deg, #ffffff 0%, #f8fbff 65%, #eef5ff 100%); }
+    .smile-subtitle { margin-top: 0.5rem; color: #c2410c; font-size: 1.05rem; }
+
+    .project-panel {
+      display: grid;
+      gap: 0.35rem;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fff;
+      padding: 1.1rem;
+    }
+    .project-panel .badge { justify-self: start; }
+    .project-panel h3 { margin: 0.15rem 0 0.2rem; font-size: 1.15rem; }
+    .project-panel h3 a { color: inherit; text-underline-offset: 3px; }
+    .project-panel .panel-focus { margin: 0 0 0.4rem; font-weight: 700; color: #c2410c; font-size: 0.94rem; }
+    .project-panel p { margin: 0; color: var(--muted); }
+    .project-panel .panel-link { margin-top: 0.8rem; }
+    .project-panel .panel-link a {
+      color: #c2410c;
+      font-weight: 650;
+      text-decoration: none;
+    }
+    .project-panel .panel-link a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+    .goals { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.7rem; }
+    .goals li {
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--primary);
+      border-radius: 12px;
+      background: #fff;
+      padding: 0.85rem 1rem;
+    }
+    .goals h3 {
+      margin: 0 0 0.3rem;
+      font-size: 1rem;
+      letter-spacing: -0.01em;
+    }
+    .goals p { margin: 0; color: var(--muted); }
+  </style>
 </head>
-<body> 
+<body>
   <header>
     <div class="container nav">
       <a class="brand" href="index.html">Research Profile <span>· Man Su</span></a>
@@ -23,18 +64,23 @@
   </header>
 
   <main class="container">
-    <section class="card algespace-hero">
-      <p class="tag">Project</p>
-      <h1>SMILE 🐑</h1>
-      <p class="lead algespace-subtitle">
-        <strong>Science Misconception-Focused Immersive Learning Environment</strong>
+
+    <section class="card smile-hero">
+      <p class="tag">Research Program</p>
+      <h1>SMILE 🧩</h1>
+      <p class="lead smile-subtitle">
+        <strong>Systems Modeling in Intelligent Learning Environment</strong>
       </p>
       <p>
-        SMILE is a research project focused on designing and studying an immersive science learning environment
-        that helps students understand emergent phenomena and address common misconceptions in complex systems.
-        The environment combines interactive simulation, LLM-based agents, and opportunities for generative
-        learning activities (e.g., making predictions) as well as metacognitive monitoring
-        (e.g., confidence-check reflections).
+        SMILE is a parallel research program comprising <strong>three GenAI-supported environments for learning
+        about complex systems</strong>. Each project takes on a different phenomenon — emergent collective
+        behavior, climate and policy, and epidemic spread — and each explores a different facet of what generative
+        AI can contribute to learning: explanation, reflection, feedback, and critique.
+      </p>
+      <p>
+        Across all three, the aim is the same: help learners reason about systems as
+        <em>connected wholes</em> — agents, interactions, relations, and causality — rather than as collections
+        of isolated facts, and give learners genuine agency over how they explore and how they ask for help.
       </p>
       <div class="actions">
         <a class="btn" href="research.html">Back to Research</a>
@@ -42,148 +88,91 @@
     </section>
 
     <section class="card">
-      <h2>Research Questions</h2>
-      <ol class="algespace-questions">
-        <li>
-          How does learner engagement within an open-world, self-paced, LLM-supported learning environment
-          relate to learning outcomes?
-        </li>
-        <li>
-          How do parameter control and questioning agency affect learners' understanding of
-          emergent phenomena in complex systems?
-        </li>
-        <li>
-          How can conceptual frameworks such as PAIR-C (Patterns, Agents, Interactions, Relations, and Causality)
-          be integrated into the design of interactive simulation-based learning environments?
-        </li>
-      </ol>
-    </section>
-
-    <section class="card">
-      <h2>The Flocking Simulator</h2>
-       <p>
-        An immersive open-world environment where learners control a virtual dog to explore animal groups
-        exhibiting collective behaviors: sheep flocks, duck flocks, and bat swarms as analogies for emergent processes in complex systems.
-      </p>
+      <h2>The Three Environments</h2>
       <div class="grid-3" style="margin-top: 1rem;">
-        <article class="tile">
-          <h4>🐑 Basic Lesson</h4>
-          <p>Foundational complex systems concepts around the sheep flock: recognizing emergent flocking patterns and matching agents in the environment to their roles.</p>
+
+        <article class="project-panel">
+          <span class="badge">Project</span>
+          <h3><a href="smile-flocking.html">Flocking Simulator 🐑</a></h3>
+          <p class="panel-focus">Emergence &amp; collective behavior</p>
+          <p>
+            An immersive open-world environment where learners control a virtual dog to explore sheep flocks,
+            duck flocks, and bat swarms, supported by the LLM-based Butterfly Tutor grounded in the PAIR-C framework.
+          </p>
+          <div class="panel-link"><a href="smile-flocking.html">View project →</a></div>
         </article>
-        <article class="tile">
-          <h4>🦆 Intermediate Lesson</h4>
-          <p>The three flocking rules from the Boids model (separation, cohesion, alignment) explored with the duck flock, covering Interactions and Relations.</p>
+
+        <article class="project-panel">
+          <span class="badge">Project</span>
+          <h3><a href="smile-climate.html">Climate Change Simulator 🌍</a></h3>
+          <p class="panel-focus">Climate systems &amp; policy trade-offs</p>
+          <p>
+            A role-based 3D simulation where learners take on a Citizen or Farmer perspective and spend a limited
+            budget on climate policies that visibly change the simulated world, guided by the AI agent Bobby.
+          </p>
+          <div class="panel-link"><a href="smile-climate.html">View project →</a></div>
         </article>
-        <article class="tile">
-          <h4>🦇 Complex Lesson</h4>
-          <p>Advanced ideas about Causality with the bat swarm: net effects vs. chain effects, common misconceptions, and transfer to phenomena like Earth's climate.</p>
+
+        <article class="project-panel">
+          <span class="badge">Project</span>
+          <h3><a href="smile-epi.html">EpiSimulator 🦠</a></h3>
+          <p class="panel-focus">Epidemic spread &amp; public health measures</p>
+          <p>
+            A NetLogo and Unity simulation where learners manipulate transmission, quarantine and vaccination
+            parameters, embedded in StudyBuds to compare an inquiry-driven peer agent with a teachable agent.
+          </p>
+          <div class="panel-link"><a href="smile-epi.html">View project →</a></div>
         </article>
+
       </div>
     </section>
 
     <section class="card">
-      <h2>The Butterfly Tutor</h2>
-      <p>
-        Learners can call a dynamic LLM-based <strong>Butterfly Tutor</strong> (powered by GPT-4o) at any time
-        for adaptive, context-aware support. Its design follows three principles:
-      </p>
-      <ol class="algespace-questions">
-        <li><strong>Theoretical alignment:</strong> responses are grounded in the PAIR-C framework to ensure conceptual consistency.</li>
-        <li><strong>Environmental awareness:</strong> the tutor uses regional metadata to contextualize its responses, intervening with certainty when it detects inactivity or off-task behaviors.</li>
-        <li><strong>Non-intrusive representation:</strong> a blinking butterfly icon gently reminds learners of the feature without demanding interaction, and softly redirects off-topic conversations back to complex systems concepts.</li>
-      </ol>
-    </section>
-
-    <section class="card">
-      <h2>Inside the Environment</h2>
-      <p class="lead">Animated snippets from the flocking simulator showing key features of the learning experience.</p>
-      <div class="grid-2 algespace-animation-grid">
-        <article class="tile algespace-animation-card">
-          <img src="media/smile/lesson1_sheep.gif" alt="Lesson 1 with the sheep flock: a prediction question and the Show Interactions view revealing the network of local interactions" />
-          <h4>Lesson 1: Emergent Flocking (Sheep)</h4>
-          <p>Learners answer prediction questions and toggle "Show Interactions" to reveal the invisible network of local interactions behind the flock's pattern.</p>
-        </article>
-        <article class="tile algespace-animation-card">
-          <img src="media/smile/butterfly_tutor.gif" alt="Learner-initiated dialogue with the LLM-based Butterfly Tutor about what the sheep flock is doing" />
-          <h4>The Butterfly Tutor</h4>
-          <p>Learners chat with the LLM-based tutor, which responds with context-aware, PAIR-C-grounded guidance about the emergent behavior around them.</p>
-        </article>
-        <article class="tile algespace-animation-card">
-          <img src="media/smile/lesson2_ducks.gif" alt="Lesson 2 with the duck flock: a prediction question followed by manipulation of alignment, cohesion, and separation sliders" />
-          <h4>Lesson 2: Predict &amp; Manipulate (Ducks)</h4>
-          <p>Built-in prompts ask learners to predict flock behavior, then test their predictions by tweaking the alignment, cohesion, and separation sliders.</p>
-        </article>
-        <article class="tile algespace-animation-card">
-          <img src="media/smile/lesson3_bats.gif" alt="Lesson 3 with the bat swarm: exploring pattern stability by manipulating the speed parameter" />
-          <h4>Lesson 3: Causality &amp; Transfer (Bats)</h4>
-          <p>Learners explore advanced causality concepts with the bat swarm, testing whether emergent patterns hold as parameters such as speed change.</p>
-        </article>
-      </div>
-      <div class="grid-2 algespace-animation-grid" style="margin-top: 0.85rem;">
-        <article class="tile algespace-animation-card">
-          <img src="media/smile/ai_feedback.png" alt="AI-generated corrective feedback elaborating on why an answer about Earth's climate as a complex system was incomplete" />
-          <h4>AI-Supported Corrective Feedback</h4>
-          <p>For open-ended questions, the system generates real-time elaborated feedback on student responses via the OpenAI API.</p>
-        </article>
-        <article class="tile algespace-animation-card">
-          <img src="media/smile/call_butterfly.png" alt="Sheep flock scene with the non-intrusive 'Call Butterfly' prompt at the bottom" />
-          <h4>Non-Intrusive Tutor Access</h4>
-          <p>A gentle "Call Butterfly" prompt reminds learners that the LLM tutor is available without demanding interaction.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>Key Findings</h2>
-      <p>
-        In a 2*2 experiment with 69 postsecondary students varying control agency (Yes/No parameter control) and questioning agency (Yes/No LLM-based tutor),
-        There are no significant differences on learning gains detected across conditions. 
-        Greater engagement with the LLM-based tutor, particularly through content-focused interactions, was associated with higher learning gains. 
-        Time spent in exploratory regions (not formal lessons) also significantly predicted posttest performance, highlighting the importance of fostering meaningful
-        engagement with both conversational tutors and interactive features in LLM-supported environments.
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>Scientific Outputs</h2>
-      <ul class="list algespace-outputs">
+      <h2>Overarching Goals</h2>
+      <ul class="goals">
         <li>
-          <strong>ISLS 2026 Short Paper.</strong>
-          Nair, A., Su, M., &amp; Nagashima, T. (2026). Exploring Learner Engagement in an LLM-Supported Simulation
-          Environment for Complex Systems Understanding. <em>International Society of the Learning Sciences (ISLS) 2026.</em>
+          <h3>Make complex systems learnable</h3>
+          <p>Support reasoning about patterns, agents, interactions, relations, and causality — the conceptual moves that factual instruction tends to leave out.</p>
         </li>
         <li>
-          <strong>Journal Article (Under Review).</strong>
-          Su, M., Nair, A., &amp; Nagashima, T. Exploring Learner Agency in an AI-supported Simulation Environment
-          for Complex Systems Education.
+          <h3>Give learners real agency</h3>
+          <p>Let learners decide what to manipulate, what to ask, whose perspective to take, and when to seek help, rather than moving them through a fixed sequence.</p>
         </li>
         <li>
-          <strong>Conference Presentation.</strong>
-          EARLI SIG 6&amp;7 (2026). Accepted contribution on the flocking simulator and complex systems learning.
+          <h3>Use GenAI as a thinking partner</h3>
+          <p>Position LLM-based agents as explainers, reflection partners, and — where useful — as objects of critique, not simply as answer machines.</p>
+        </li>
+        <li>
+          <h3>Support self-regulated learning</h3>
+          <p>Build in prediction, confidence monitoring, and structured reflection so learners can observe how their own understanding changes.</p>
+        </li>
+        <li>
+          <h3>Ground design in theory and evidence</h3>
+          <p>Draw on frameworks such as PAIR-C and evaluate each environment with pre/post measures alongside fine-grained interaction log data.</p>
         </li>
       </ul>
     </section>
 
     <section class="card">
-      <h2>Project Team</h2>
-      <div class="grid-3 algespace-team-grid">
-        <article class="tile">
-          <h4>Developers</h4>
-          <p>Amit Nair (Flocking Simulator)</p>
-        </article>
-        <article class="tile">
-          <h4>Researchers</h4>
-          <p>Dr. Man Echo Su (PI, Project Lead)</p>
-          <p>Dr. Lidia Altamura (Postdoc collaborator)</p>
-          <p>Amit Nair (Research Assistant)</p>
-          <p>Prof. Tomohiro Nagashima (Advisor)</p>
-          
-        </article>
-        <article class="tile">
-          <h4>Design Partners</h4>
-          <p>Developed through participatory design with a high school biology teacher and a domain expert in complexity science.</p>
-        </article>
-      </div>
+      <h2>Overarching Research Questions</h2>
+      <ol class="algespace-questions">
+        <li>
+          How can GenAI-supported simulation environments be designed to foster conceptual understanding
+          of complex systems across different domains?
+        </li>
+        <li>
+          How do different forms of learner agency — parameter control, questioning, perspective-taking, and
+          self-pacing — shape engagement and learning outcomes?
+        </li>
+        <li>
+          What roles can LLM-based conversational agents play in these environments, and how does each role
+          relate to learning, reflection, and self-regulation?
+        </li>
+        <li>
+          What do interaction data reveal about how learners engage with open-ended, AI-supported
+          learning environments?
+        </li>
+      </ol>
     </section>
 
     <footer>© Man Su · SMILE</footer>
