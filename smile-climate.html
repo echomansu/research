@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Climate Change Simulator | SMILE | Researcher Profile</title>
+  <meta name="description" content="Climate Change Simulator: a role-based 3D climate learning environment with a context-aware AI conversational agent, part of the SMILE research program." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .climate-hero {
+      background: linear-gradient(125deg, #ffffff 0%, #f6fbf8 60%, #e9f3ef 100%);
+    }
+
+    .climate-subtitle {
+      margin-top: 0.5rem;
+      color: #c2410c;
+      font-size: 1.05rem;
+    }
+
+    .climate-scroll-row {
+      grid-auto-columns: min(460px, 84vw);
+    }
+
+    .climate-scroll-row img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: #f4f7f5;
+    }
+
+    .climate-scroll-row h4 {
+      margin-bottom: 0.35rem;
+    }
+
+    .climate-scroll-row p {
+      color: var(--muted);
+    }
+
+    @media (max-width: 680px) {
+      .climate-scroll-row { grid-auto-columns: 88vw; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html">Research Profile <span>· Man Su</span></a>
+      <nav class="menu" aria-label="Primary navigation">
+        <a href="about.html">About</a>
+        <a class="active" href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="team.html">Team</a>
+        <a href="publications.html">Publications</a>
+        <a href="news.html">News</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card climate-hero">
+      <p class="tag">SMILE Program · Project</p>
+      <h1>Climate Change Simulator 🌍</h1>
+      <p class="lead climate-subtitle">
+        <strong>Take a role. Weigh the trade-offs. Watch the planet answer back.</strong>
+      </p>
+      <p>
+        In this role-based 3D environment, learners become a <strong>Citizen</strong> or a
+        <strong>Farmer</strong>, explore connected climate systems, and invest limited
+        <em>Power Coins</em> in policies that visibly change the simulated world. A context-aware AI tutor,
+        <strong>Bobby</strong>, helps learners interpret policy trade-offs, extreme events, and changes in
+        their own reasoning.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="smile.html">About the SMILE Program</a>
+        <a class="btn" href="research.html">Back to Research</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Research Questions</h2>
+      <ol class="algespace-questions">
+        <li>
+          How can a role-based climate simulator and a context-aware AI tutor support learners’
+          understanding of climate systems and policy trade-offs?
+        </li>
+        <li>
+          How does interacting with the simulator and AI tutor influence learners’ climate knowledge,
+          climate anxiety, and willingness to act?
+        </li>
+        <li>
+          How do learners perceive the usability and usefulness of the simulator and its AI tutor?
+        </li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>Inside the Environment</h2>
+      <p>
+        The experience connects role-taking, exploration, policy decisions, visible consequences, and
+        context-aware AI support in one continuous learner journey.
+      </p>
+      <p class="scroll-hint">Scroll sideways for more →</p>
+      <div class="scroll-row climate-scroll-row" role="region" aria-label="Screenshots and animations from the Climate Change Simulator" tabindex="0">
+        <article class="tile algespace-animation-card">
+          <img src="media/smile-climate/role-selection.png" alt="Profile screen confirming the learner is exploring as a Citizen, with a Start Introduction button" />
+          <h4>🎭 Choose a Perspective</h4>
+          <p>The Citizen and Farmer roles shape the topics learners encounter and the trade-offs they experience.</p>
+        </article>
+
+        <article class="tile algespace-animation-card">
+          <img src="media/smile-climate/guided-entry.gif" alt="Welcome panel introducing the Climate Simulation, the learner's Citizen role, Earth Health and Power Coins" />
+          <h4>🤖 Meet Bobby</h4>
+          <p>Bobby introduces Earth Health, Power Coins, and what the learner is there to do.</p>
+        </article>
+
+        <article class="tile algespace-animation-card">
+          <img src="media/smile-climate/policy-decisions.gif" alt="Decision-making point offering three farmland policies, with a remaining-decisions counter, a budget hint and a skip option" />
+          <h4>⚖️ Decide Under Constraint</h4>
+          <p>A finite coin budget and a skip option make policy choice a balancing problem, and some cheap options do harm.</p>
+        </article>
+
+        <article class="tile algespace-animation-card">
+          <img src="media/smile-climate/visible-consequences.png" alt="The 3D world with active Forest Fire and Flood events after a policy costing 2 Power Coins reduced Earth Health by 7" />
+          <h4>🌪️ Watch the World Respond</h4>
+          <p>Earth Health links decisions to visible change, with fires, floods and other events appearing as it falls.</p>
+        </article>
+
+        <article class="tile algespace-animation-card">
+          <img src="media/smile-climate/bobby-support.png" alt="Bobby explaining the benefits of a chosen solar policy in a bulleted list beside the 3D farm" />
+          <h4>💬 Ask Bobby in Context</h4>
+          <p>Bobby grounds each explanation in the policy the learner just chose and the state currently on screen.</p>
+        </article>
+
+        <article class="tile algespace-animation-card">
+          <img src="media/smile-climate/misconception-correction.png" alt="Correct the Misconception activity explaining that the AI answer contains errors the learner must identify" />
+          <h4>🔍 Challenge the AI</h4>
+          <p>In a separate mode, learners must find and repair misconceptions the AI deliberately planted.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Scientific Outputs</h2>
+      <ul class="list algespace-outputs">
+        <li>
+          <strong>Bachelor Thesis.</strong>
+          Gaffga, K. T. (2026). <em>Design and Evaluation of an AI-Supported Climate Simulation to Foster
+          Conceptual Understanding and Self-Regulated Learning.</em> Saarland University, Faculty of Mathematics
+          and Computer Science. Advisor: Dr. Man Su. Reviewers: Prof. Dr. Tomohiro Nagashima and Dr.-Ing. Felix Kosmalla.
+        </li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Project Team</h2>
+      <div class="grid-3 algespace-team-grid">
+        <article class="tile">
+          <h4>Developer</h4>
+          <p>Kevin Tanagon Gaffga (Climate Change Simulator)</p>
+        </article>
+        <article class="tile">
+          <h4>Researchers</h4>
+          <p>Dr. Man Echo Su (PI, Project Lead, Thesis Advisor)</p>
+          <p>Prof. Tomohiro Nagashima (Advisor)</p>
+        </article>
+        <article class="tile">
+          <h4>Context</h4>
+          <p>Developed and evaluated at the LaLaLab, Saarland Informatics Campus, in collaboration with the Leibniz-Institut für Wissensmedien.</p>
+        </article>
+      </div>
+    </section>
+
+    <footer>© Man Su · SMILE · Climate Change Simulator</footer>
+  </main>
+</body>
+</html>
