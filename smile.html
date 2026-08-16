@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SMILE | Researcher Profile</title>
+  <meta name="description" content="SMILE brings together three AI supported simulation environments for learning about flocking, climate systems, and epidemic spread." />
+  <link rel="stylesheet" href="styles.css" />
+  <noscript>
+    <style>
+      .smile-project-tabs { display: none; }
+      .smile-project-panel[hidden] { display: grid !important; }
+    </style>
+  </noscript>
+</head>
+<body class="smile-program-page">
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html">Research Profile <span>· Man Su</span></a>
+      <nav class="menu" aria-label="Primary navigation">
+        <a href="about.html">About</a>
+        <a class="active" href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="team.html">Team</a>
+        <a href="publications.html">Publications</a>
+        <a href="news.html">News</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container smile-program-main">
+    <section class="card smile-program-hero" aria-labelledby="smile-title">
+      <div class="smile-hero-copy">
+        <p class="tag">Research Program</p>
+        <h1 id="smile-title">SMILE <span aria-hidden="true">🧩</span></h1>
+        <p class="smile-program-name">Systems Modeling in Intelligent Learning Environment</p>
+        <p class="smile-hero-statement">Learn complex systems by stepping inside them.</p>
+        <p class="smile-hero-summary">
+          Three interactive worlds connect simulation, learner agency, and AI supported dialogue. Learners
+          explore emergence, make decisions under uncertainty, and explain how systems change.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="#smile-projects">Explore the three worlds</a>
+          <a class="btn" href="research.html">Back to Research</a>
+        </div>
+      </div>
+
+      <div class="smile-hero-collage" aria-label="Previews of the three SMILE environments">
+        <figure class="smile-snapshot smile-snapshot-flocking">
+          <img src="media/smile/intro_screen.png" alt="Flocking Simulator opening scene with a dog avatar and animal groups" />
+          <figcaption><span aria-hidden="true">🐑</span> Flocking</figcaption>
+        </figure>
+        <figure class="smile-snapshot smile-snapshot-climate">
+          <img src="media/smile-climate/policy-decisions.png" alt="Climate Change Simulator policy decision screen" />
+          <figcaption><span aria-hidden="true">🌍</span> Climate</figcaption>
+        </figure>
+        <figure class="smile-snapshot smile-snapshot-epi">
+          <img src="media/smile-epi/milestone-tracker.png" alt="EpiSimulator learning milestone tracker" />
+          <figcaption><span aria-hidden="true">🦠</span> Epidemics</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="card smile-project-explorer" id="smile-projects" aria-labelledby="projects-title">
+      <div class="smile-section-heading">
+        <div>
+          <p class="smile-eyebrow">Explore the program</p>
+          <h2 id="projects-title">Three worlds. Three forms of agency.</h2>
+        </div>
+        <p>Select a project to see how its system, learner action, and AI role fit together.</p>
+      </div>
+
+      <div class="smile-project-tabs" role="tablist" aria-label="SMILE projects">
+        <button class="smile-project-tab is-active" id="tab-flocking" type="button" role="tab"
+          aria-selected="true" aria-controls="panel-flocking" data-project-tab="flocking">
+          <span aria-hidden="true">🐑</span> Flocking
+        </button>
+        <button class="smile-project-tab" id="tab-climate" type="button" role="tab"
+          aria-selected="false" aria-controls="panel-climate" data-project-tab="climate" tabindex="-1">
+          <span aria-hidden="true">🌍</span> Climate
+        </button>
+        <button class="smile-project-tab" id="tab-epi" type="button" role="tab"
+          aria-selected="false" aria-controls="panel-epi" data-project-tab="epi" tabindex="-1">
+          <span aria-hidden="true">🦠</span> Epidemics
+        </button>
+      </div>
+
+      <div class="smile-project-panels">
+        <article class="smile-project-panel theme-flocking" id="panel-flocking" role="tabpanel"
+          aria-labelledby="tab-flocking" data-project-panel="flocking">
+          <div class="smile-project-media">
+            <img src="media/smile/exploration.gif" alt="A learner guides a dog through the open world of the Flocking Simulator" loading="lazy" />
+          </div>
+          <div class="smile-project-copy">
+            <p class="smile-project-number">Project 01</p>
+            <h3>Flocking Simulator</h3>
+            <p class="smile-project-punchline">Follow your curiosity and uncover how local interactions create collective patterns.</p>
+            <dl class="smile-project-facts">
+              <div><dt>System</dt><dd>Animal flocking and emergence</dd></div>
+              <div><dt>Learner action</dt><dd>Explore freely and manipulate interaction rules</dd></div>
+              <div><dt>AI role</dt><dd>On demand Butterfly Tutor grounded in PAIR-C</dd></div>
+            </dl>
+            <a class="smile-project-link" href="smile-flocking.html">Enter the Flocking Simulator <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="smile-project-panel theme-climate" id="panel-climate" role="tabpanel"
+          aria-labelledby="tab-climate" data-project-panel="climate" hidden>
+          <div class="smile-project-media">
+            <img src="media/smile-climate/visible-consequences.gif" alt="A climate policy changes Earth Health and produces visible events in the simulated world" loading="lazy" />
+          </div>
+          <div class="smile-project-copy">
+            <p class="smile-project-number">Project 02</p>
+            <h3>Climate Change Simulator</h3>
+            <p class="smile-project-punchline">Take a perspective, weigh competing priorities, and watch the planet respond.</p>
+            <dl class="smile-project-facts">
+              <div><dt>System</dt><dd>Climate dynamics and policy trade-offs</dd></div>
+              <div><dt>Learner action</dt><dd>Choose a role and invest limited Power Coins</dd></div>
+              <div><dt>AI role</dt><dd>Context aware tutor Bobby explains each consequence</dd></div>
+            </dl>
+            <a class="smile-project-link" href="smile-climate.html">Enter the Climate Change Simulator <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="smile-project-panel theme-epi" id="panel-epi" role="tabpanel"
+          aria-labelledby="tab-epi" data-project-panel="epi" hidden>
+          <div class="smile-project-media">
+            <img src="media/smile-epi/simulation-run.gif" alt="An epidemic spreads through a simulated town as population counts update" loading="lazy" />
+          </div>
+          <div class="smile-project-copy">
+            <p class="smile-project-number">Project 03</p>
+            <h3>EpiSimulator</h3>
+            <p class="smile-project-punchline">Adjust interventions, slow the spread, and explain why the outbreak changes course.</p>
+            <dl class="smile-project-facts">
+              <div><dt>System</dt><dd>Epidemic spread and public health measures</dd></div>
+              <div><dt>Learner action</dt><dd>Manipulate parameters and monitor learning milestones</dd></div>
+              <div><dt>AI role</dt><dd>Inquiry driven peer or misconception driven teachable agent</dd></div>
+            </dl>
+            <a class="smile-project-link" href="smile-epi.html">Enter EpiSimulator <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="card smile-program-arc" aria-labelledby="arc-title">
+      <div class="smile-section-heading">
+        <div>
+          <p class="smile-eyebrow">A connected research program</p>
+          <h2 id="arc-title">From noticing patterns to explaining change</h2>
+        </div>
+        <p>Each project advances a shared investigation of how agency can be designed and supported.</p>
+      </div>
+
+      <ol class="smile-arc-steps">
+        <li>
+          <span class="smile-step-number">01</span>
+          <p class="smile-step-project">Flocking</p>
+          <h3>Explore emergence</h3>
+          <p>Trace how local interactions produce stable or changing group patterns.</p>
+        </li>
+        <li>
+          <span class="smile-step-number">02</span>
+          <p class="smile-step-project">Climate</p>
+          <h3>Decide under trade-offs</h3>
+          <p>Evaluate policies from a chosen perspective and confront their consequences.</p>
+        </li>
+        <li>
+          <span class="smile-step-number">03</span>
+          <p class="smile-step-project">Epidemics</p>
+          <h3>Construct explanations</h3>
+          <p>Test interventions and reason with an AI agent about nonlinear change.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="smile-research-question" aria-labelledby="throughline-title">
+      <p class="smile-eyebrow">Research throughline</p>
+      <h2 id="throughline-title">How can AI supported simulations help learners understand complex systems while making meaningful, informed choices?</h2>
+      <ul class="smile-theme-list" aria-label="SMILE research themes">
+        <li>Conceptual understanding</li>
+        <li>Learner agency</li>
+        <li>Human AI interaction</li>
+      </ul>
+    </section>
+
+    <footer>© Man Su · SMILE</footer>
+  </main>
+
+  <script>
+    (() => {
+      const tabs = Array.from(document.querySelectorAll('[data-project-tab]'));
+      const panels = Array.from(document.querySelectorAll('[data-project-panel]'));
+
+      function activateProject(project, moveFocus = false) {
+        tabs.forEach((tab) => {
+          const active = tab.dataset.projectTab === project;
+          tab.classList.toggle('is-active', active);
+          tab.setAttribute('aria-selected', String(active));
+          tab.tabIndex = active ? 0 : -1;
+          if (active && moveFocus) tab.focus();
+        });
+
+        panels.forEach((panel) => {
+          panel.hidden = panel.dataset.projectPanel !== project;
+        });
+      }
+
+      tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => activateProject(tab.dataset.projectTab));
+        tab.addEventListener('keydown', (event) => {
+          let nextIndex;
+          if (event.key === 'ArrowRight') nextIndex = (index + 1) % tabs.length;
+          if (event.key === 'ArrowLeft') nextIndex = (index - 1 + tabs.length) % tabs.length;
+          if (event.key === 'Home') nextIndex = 0;
+          if (event.key === 'End') nextIndex = tabs.length - 1;
+          if (nextIndex === undefined) return;
+          event.preventDefault();
+          activateProject(tabs[nextIndex].dataset.projectTab, true);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
